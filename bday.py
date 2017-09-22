@@ -32,8 +32,6 @@ bday_end = datetime(bday.year, bday.month, bday.day +1)
 ut_bday_start = time.mktime(bday_start.timetuple())
 ut_bday_end = time.mktime(bday_end.timetuple())
 
-access_token = "EAACEdEose0cBAJ2oU98NH7ScNGRDphI1ZA2FVT1u6F2b0hzL9XhwWmh4BO2mxqlkuZB4Bkdk7BJZB8pJBq22AuWsYAdIRSmPGA4K7U8AEs4461eRZB7bcJZBJdin4g0rKTICeEwjOYvWbH7xL3uQCafbsMQ8dU70avgwn2FCSd24c08AquBJdPbyUgXVd5ZAZBHzVISu0MlRwZDZD"
-
 #the list of language
 languages = ["eng","fr","it"]
 
@@ -76,6 +74,7 @@ def get_posts(url, feeds=None):
         return get_posts(next_url, feeds)
     else:
         print ("Unable to connect. Check if token is still valid")
+        exit(0)
 
 def wishFilter (posts_array):
     wishes = []

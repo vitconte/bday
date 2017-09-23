@@ -15,3 +15,6 @@ Insert the correct parameters inside config.json:
 - bday: your birthday (format: YYYY-mm-DD)
 
 
+Warning
+--------
+Work in progress!

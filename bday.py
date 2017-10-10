@@ -19,6 +19,9 @@ if not data["bday"]:
     print ("Insert your birthday")
     exit(0)
 
+if not data["signature"]:
+    print ("Insert the bot signature")
+    exit(0)
 
 # access token
 access_token = data["token"] 
@@ -36,7 +39,7 @@ ut_bday_end = time.mktime(bday_end.timetuple())
 languages = ["eng","fr","it"]
 
 #the list of messages response by languages
-messages = {"eng" : "Thanks by VitBot!", "fr": "Merci de VitBot!", "it": "Grazie da VitBot!"}
+messages = {"eng" : "Thanks by %s!" % data["signature"], "fr": "Merci de %s!" % data["signature"], "it": "Grazie da %s!" % data["signature"]}
 
 #bday words to check
 bdaywords = {"eng": ["happy", "bday", "b\'day", "birthday","hbd", "wish", "returns"], "fr": ["bon", "joyeux", "anniversaire"], "it": ["compleanno", "auguri"]}
